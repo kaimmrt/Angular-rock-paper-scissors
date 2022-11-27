@@ -1,0 +1,32 @@
+.scorboard-container {
+  height: 17vh;
+  border-radius: 10px;
+  margin-bottom: 7vh;
+  border: 3px solid #606e85;
+  display: flex;
+  justify-content: space-between;
+  padding: 2vh 5vh 0 5vh;
+  margin-top: 20px;
+  .scorboard-title {
+    color: white;
+  }
+
+  .scor-container {
+    background-color: white;
+    width: 150px;
+    height: 15vh;
+    border-radius: 10px;
+    text-align: center;
+
+    .score-title {
+      color: #2b46c0;
+      font-weight: bold;
+    }
+
+    .score {
+      color: gray;
+      font-weight: bold;
+      font-size: 50px;
+    }
+  }
+}

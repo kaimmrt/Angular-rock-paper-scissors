@@ -1,0 +1,35 @@
+<div class="items-container">
+  <ul *ngIf="!(state$ | async)?.click">
+    <li *ngFor="let item of (state$ | async)?.items">
+      <app-card [item]="item"></app-card>
+    </li>
+  </ul>
+  <div *ngIf="(state$ | async)?.click" class="select-container">
+    <div class="select-circle-container">
+      <h3 class="selected-title">You Picked</h3>
+      <div
+        [ngStyle]="{ borderColor: (state$ | async)?.selectedItem?.color }"
+        class="circle-container-select"
+      >
+        {{ (state$ | async)?.selectedItem?.title }}
+      </div>
+    </div>
+
+    <div class="msg-container">
+      <h1 class="msg">{{ (state$ | async)?.message }}</h1>
+      <button class="btn" (click)="playAgain()">PLAY AGAIN</button>
+    </div>
+
+    <div class="select-circle-container">
+      <h3 class="selected-title">Computer Picked</h3>
+      <div
+        [ngStyle]="{
+          borderColor: (state$ | async)?.computerSelectedItem?.color
+        }"
+        class="circle-container-select"
+      >
+        {{ (state$ | async)?.computerSelectedItem?.title }}
+      </div>
+    </div>
+  </div>
+</div>

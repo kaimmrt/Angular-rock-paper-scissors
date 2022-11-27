@@ -1,0 +1,20 @@
+.circle-container {
+  width: 150px;
+  height: 150px;
+  background-color: white;
+  box-shadow: rgb(204, 219, 232) 3px 3px 6px 0px inset,
+    rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 15px solid #4865f4;
+  border-radius: 115px;
+  cursor: pointer;
+  transition: transform 0.2s;
+  z-index: 2;
+}
+
+.circle-container:hover {
+  transform: scale(1.2);
+}
